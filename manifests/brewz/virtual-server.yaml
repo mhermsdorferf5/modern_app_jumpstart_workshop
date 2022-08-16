@@ -23,6 +23,12 @@ spec:
       port: 80
   routes:
     - path: /
+      matches:
+        - conditions:
+          - cookie: "app_version"
+            value: "dark"
+          action:
+            pass: spa-dark
       action:
         pass: spa
     - path: /api
@@ -45,12 +51,3 @@ spec:
         proxy:
           upstream: api
           rewritePath: /images
-    - path: /
-      matches:
-        - conditions:
-          - cookie: "app_version"
-            value: "dark"
-          action:
-            pass: spa-dark
-      action:
-        pass: spa
