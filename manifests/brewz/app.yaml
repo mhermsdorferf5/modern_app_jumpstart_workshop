@@ -71,6 +71,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: api
+  labels:
+    cis.f5.com/as3-tenant: brewz
+    cis.f5.com/as3-app: brewz
+    cis.f5.com/as3-pool: api_pool
 spec:
   ports:
     - port: 8000
@@ -105,6 +109,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: spa
+  labels:
+    cis.f5.com/as3-tenant: brewz
+    cis.f5.com/as3-app: brewz
+    cis.f5.com/as3-pool: spa_pool
 spec:
   ports:
     - port: 80
@@ -139,6 +147,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: recommendations
+  labels:
+    cis.f5.com/as3-tenant: brewz
+    cis.f5.com/as3-app: brewz
+    cis.f5.com/as3-pool: recommendations_pool 
 spec:
   ports:
     - port: 8001
@@ -173,6 +185,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: inventory
+  labels:
+    cis.f5.com/as3-tenant: brewz
+    cis.f5.com/as3-app: brewz
+    cis.f5.com/as3-pool: inventory_pool
 spec:
   ports:
     - port: 8002
@@ -206,6 +222,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: spa-dark
+  labels:
+    cis.f5.com/as3-tenant: brewz
+    cis.f5.com/as3-app: brewz
+    cis.f5.com/as3-pool: spadark_pool
 spec:
   ports:
     - port: 80
