@@ -76,6 +76,7 @@ metadata:
     cis.f5.com/as3-app: brewz
     cis.f5.com/as3-pool: api_pool
 spec:
+  type: NodePort
   ports:
     - port: 8000
       targetPort: 8000
@@ -114,6 +115,7 @@ metadata:
     cis.f5.com/as3-app: brewz
     cis.f5.com/as3-pool: spa_pool
 spec:
+  type: NodePort
   ports:
     - port: 80
       targetPort: 80
@@ -152,6 +154,7 @@ metadata:
     cis.f5.com/as3-app: brewz
     cis.f5.com/as3-pool: recommendations_pool 
 spec:
+  type: NodePort
   ports:
     - port: 8001
       targetPort: 8001
@@ -190,6 +193,7 @@ metadata:
     cis.f5.com/as3-app: brewz
     cis.f5.com/as3-pool: inventory_pool
 spec:
+  type: NodePort
   ports:
     - port: 8002
       targetPort: 8002
@@ -227,6 +231,7 @@ metadata:
     cis.f5.com/as3-app: brewz
     cis.f5.com/as3-pool: spadark_pool
 spec:
+  type: NodePort
   ports:
     - port: 80
       targetPort: 80
